@@ -79,7 +79,10 @@ src/designpatterns/
 ```bash
 javac -d . src/designpatterns/**/*.java
 ```
-
+### Maven Build (Spring Boot dependencies)
+```bash
+mvn compile
+```
 ### Run the Reference
 ```bash
 java designpatterns.DesignPatternsReference
