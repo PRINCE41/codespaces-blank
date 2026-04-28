@@ -1,4 +1,4 @@
-package streamapi;
+package main.java.streamapi;
 
 import java.util.*;
 import java.util.stream.*;
