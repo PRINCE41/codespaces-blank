@@ -63,9 +63,9 @@ public class TerminalOperations {
      * Interview Question: How to handle duplicate keys in toMap?
      */
     public void collectToMap() {
-        List<String> list = Arrays.asList("apple", "banana");
-        Map<String, Integer> map = list.stream()
-                                       .collect(Collectors.toMap(s -> s, String::length));
+        List<String> list = Arrays.asList("apple", "banana", "cherry", "avocado");
+        Map<Character, String> map = list.stream()
+                                       .collect(Collectors.toMap(s -> s.charAt(0), s -> s, (s1, s2) -> s1));
         System.out.println(map);
     }
 

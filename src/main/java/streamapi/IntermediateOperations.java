@@ -149,10 +149,12 @@ public class IntermediateOperations {
      * Example 13: boxed - converts primitive to object stream
      * Interview Question: How to convert IntStream to Stream<Integer>?
      */
-    public void boxedExample() {
+    public static void main(String[] args) {
         IntStream.range(1, 5)
+                // toArray()
                  .boxed()
-                 .forEach(System.out::println);
+                 .toArray();
+                 
     }
 
     // Continue with more examples, variations, and interview questions
