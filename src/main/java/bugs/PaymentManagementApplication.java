@@ -1,4 +1,4 @@
-package main.java.designpatterns.others;
+package main.java.bugs;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
