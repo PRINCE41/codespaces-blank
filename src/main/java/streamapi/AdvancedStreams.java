@@ -37,7 +37,7 @@ public class AdvancedStreams {
      * Example 3: Custom collector
      * Interview Question: How to create a custom collector?
      */
-    public void customCollector() {
+    public static void customCollector() {
         List<String> words = Arrays.asList("hello", "world");
         Collector<String, ?, String> collector = Collector.of(
             StringBuilder::new,
