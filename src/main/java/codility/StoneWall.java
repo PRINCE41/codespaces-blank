@@ -24,18 +24,33 @@ public class StoneWall {
     */
 
     public int solution(int[] H) {
+        // `blocks` will count the minimum number of stone blocks required.
         int blocks = 0;
+
+        // Use a stack to keep track of the current block heights as we move from left to right.
+        // Each stack entry represents a block height that is still "open" to the right.
         java.util.Stack<Integer> stack = new java.util.Stack<>();
 
+        // Walk through each height in the wall profile.
         for (int height : H) {
+            // If the current required height is lower than the last open block height,
+            // close blocks until the stack height is <= current height.
             while (!stack.isEmpty() && stack.peek() > height) {
                 stack.pop();
             }
+
+            // If there are no open blocks left, or the last open block is shorter than
+            // the current required height, we need a new block of this height.
             if (stack.isEmpty() || stack.peek() < height) {
                 stack.push(height);
-                blocks++;
+                blocks++; // count the new block.
             }
+
+            // If the top of stack equals the current height, we can continue using the
+            // existing open block and do not need to add another one.
         }
+
+        // Return the total minimum number of blocks needed.
         return blocks;
     }
 }
